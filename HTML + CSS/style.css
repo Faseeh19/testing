@@ -1,0 +1,438 @@
+@charset "utf-8";
+
+:root {
+    --main-bg-color: #10ac84;
+    --white-main-color: #fff;
+    --black-color: #000;
+    --dark-gray-color: #1e272e;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.border{
+    border: 2px solid black;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#main {
+    width: 100%;
+    height: 100vh;
+    /* VH=  view-height */
+    position: relative;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 10px 30px rgba(0,0,0,0.02);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #fff;
+}
+
+nav ul { 
+    display: flex;
+}
+
+nav ul li a {
+    height: 40px;
+    line-height: 43px;
+    margin: 3px;
+    padding: 0px 22px;
+    text-transform: uppercase;
+    display: flex;
+    color: #585b55;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+}
+
+nav ul li a:hover {
+    background-color: var(--main-bg-color);
+    color: #fff;
+    border-radius: 5px;
+}
+
+.get-in-touch {
+    color: var(--dark-gray-color);
+    font-weight: 500;
+    font-size: 0.9em;
+    border-bottom: 2px solid var(--main-bg-color);
+}
+
+.logo-heading {
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: var(--black-color);
+}
+
+.name {
+    font-weight: 800;
+    text-decoration: underline;
+    text-decoration-color: var(--main-bg-color);
+}
+
+nav .menu-btn, nav .menu-icon {
+    display: none;
+}
+
+/* Content */
+
+#content {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.model {
+    height: 500px;
+    width: 500px;
+}
+
+.model img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main-text {
+    width: 500px;
+}
+
+.main-text h1 {
+    font-size: 3.5em;
+    margin: 0px 0px 10px 0px;
+    line-height: 60px;
+}
+
+.main-text p {
+    color: #747474;
+}
+
+/* Same for the See More Project in Recent Section */
+.portfolio-button {
+    width: 190px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    color: var(--white-main-color);
+    background-color: var(--main-bg-color);
+    border-radius: 5px;
+    font-weight: 600;
+    /* transition-duration: 4s */
+}
+
+.portfolio-button:hover{
+    color: var(--main-bg-color);
+    background-color: var(--white-main-color);
+    /* border: #000 solid; */
+    font-weight: 600;
+}
+
+/* Skills Section */
+
+#skills {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    align-items: center;
+    margin: auto auto 50px auto;
+}
+
+.skill-img {
+    width: 600px;
+    height: 480px;
+}
+
+.skill-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+.skill-text {
+    width: 400px;
+}
+.skill-heading span {
+    color: var(--main-bg-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+.skill-heading h2{
+    color: var(--dark-gray-color);
+    font-size: 3rem;
+    margin: 0px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.s-box-container {
+    margin-top: 30px;
+}
+
+.skill-box {
+    display: flex;
+    margin: 25px 0px;
+}
+.s-box-icon {
+    margin-right: 12px;
+}
+.s-box-icon i{
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    /* display: grid; */
+    /* place-items: center; */
+}
+
+.fab {
+    color: var(--main-bg-color);
+}
+
+.s-box-text strong{
+    color: var(--dark-gray-color);
+    margin: 0px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.s-box-text p {
+    font-size: 0.9rem;
+    color: var(--dark-gray-color);
+}
+
+/* Projects Sections -- Recent */
+
+#my-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: auto auto 50px auto;
+}
+
+.recent-heading span{
+    color: var(--main-bg-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+
+.recent-heading h2 {
+    color: var(--dark-gray-color);
+    font-size: 3rem;
+    margin: 0px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.project-showcase {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+.project {
+    width: 350px;
+    height: 250px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0px;
+}
+
+.one {
+    background-image: url("/HTML + CSS/img/01.png");
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    /* height: 200px; */
+}
+
+.two {
+    background-image: url("/HTML + CSS/img/02.png");
+    background-size: contain;
+}
+
+.three {
+    background-image: url("/HTML + CSS/img/03.png");
+    background-size: contain;
+}
+
+.project #hide {
+    visibility: hidden;
+    background-color: var(--white-main-color);
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    border-radius: 20px;
+    opacity: 100%;
+}
+
+.project:hover #hide {
+    visibility: visible;
+    border: 1px solid var(--main-bg-color);
+    z-index: 1000;
+    /* border-radius: 20px; */
+    cursor: pointer;
+    /* transition: all ease 12s; */
+}
+
+.project-text{
+    color: var(--black-color);
+    font-size: 1.3rem;
+    padding: 20px;
+    justify-content: space-evenly;
+}
+.project-btn {
+    columns: var(--black-color);
+    background: var(--white-main-color);
+    border: 1px solid var(--main-bg-color);
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0px 5px 15px rgba(145, 92, 182, 0.4);
+}
+
+.project-btn:hover{
+    color: var(--white-main-color);
+    background-color: var(--black-color);
+    border: 1px solid var(--main-bg-color);
+    box-shadow: 0px 5px 15px rgba(145, 92, 182, 0.4);
+}
+
+
+/* See More Project is same as Whatsapp One */
+
+
+/* Client Section */
+
+#client {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: auto auto 50px auto;
+    /* background: later; */
+    padding: 50px 0px;
+    background-image: url(./img/background-image.webp);
+    border-radius: 3px;
+}
+
+.client-heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0px;
+}
+
+.client-box{
+    width: 300px;
+    height: 350px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin: 20px;
+    background-color: var(--white-main-color);
+}
+
+.client-box:hover{
+    background-color: transparent;
+}
+
+.client-box img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: var(--white-main-color);
+    object-fit: cover;
+}
+
+.star{
+    display: flex;
+    margin: 10px 0px 20px 0px;
+}
+
+.star i{
+    color: gold;
+}
+
+.client-box p{
+    width: 300px;
+    height: 80px;
+    color: var(--dark-gray-color);
+    font-size: 0.9rem;
+    margin: 0px;
+    text-align: center;
+    display: block;
+    max-width: 80%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.client-box a{
+    width: 190px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    color: var(--white-main-color);
+    background-color: var(--main-bg-color);
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: 20px;
+    border: 1px solid white;
+}
+
+.client-box a:hover{
+    color: var(--main-bg-color);
+    background-color: var(--white-main-color);
+    border: 1px solid white;
+}
+
+
